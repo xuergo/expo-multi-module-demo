@@ -4,12 +4,7 @@ export type ChangeEventPayload = {
   value: string;
 };
 
-type Series = {
-  color: string;
-  percentage: number;
-};
 
 export type ExpoMultiModuleDemoViewProps = {
   style?: ViewStyle;
-  data: Series[];
 };
