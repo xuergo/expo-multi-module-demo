@@ -1,7 +1,15 @@
+import { ViewStyle } from 'react-native/types';
+
 export type ChangeEventPayload = {
   value: string;
 };
 
+type Series = {
+  color: string;
+  percentage: number;
+};
+
 export type ExpoMultiModuleDemoViewProps = {
-  name: string;
+  style?: ViewStyle;
+  data: Series[];
 };

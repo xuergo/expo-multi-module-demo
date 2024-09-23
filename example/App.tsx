@@ -1,20 +1,30 @@
 import { StyleSheet, Text, View } from 'react-native';
-
-import * as ExpoMultiModuleDemo from 'expo-multi-module-demo';
+import { ExpoMultiModuleDemoView } from 'expo-multi-module-demo';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>{ExpoMultiModuleDemo.hello()}</Text>
-    </View>
+    <ExpoMultiModuleDemoView
+      style={styles.container}
+      data={[
+        {
+          color: '#ff0000',
+          percentage: 0.5,
+        },
+        {
+          color: '#00ff00',
+          percentage: 0.2,
+        },
+        {
+          color: '#0000ff',
+          percentage: 0.3,
+        },
+      ]}
+    />
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
