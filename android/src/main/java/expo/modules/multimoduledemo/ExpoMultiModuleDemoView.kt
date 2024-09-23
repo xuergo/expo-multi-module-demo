@@ -11,6 +11,15 @@ import expo.modules.kotlin.AppContext
 import expo.modules.kotlin.records.Field
 import expo.modules.kotlin.records.Record
 import expo.modules.kotlin.views.ExpoView
+import androidx.compose.material3.Text
+import android.util.Log
+import androidx.compose.ui.platform.ComposeView
+import android.widget.LinearLayout
+import android.view.ViewGroup.LayoutParams
+import androidx.compose.runtime.Composable
+import android.widget.TextView
+
+
 
 
 class Series : Record {
@@ -22,23 +31,13 @@ class Series : Record {
 }
 
 class ExpoMultiModuleDemoView(context: Context, appContext: AppContext) : ExpoView(context, appContext) {
-  internal val chartView = PieChart(context).also {
-    it.layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
-    addView(it)
-  }
 
-  fun setChartData(data: ArrayList<Series>) {
-    val entries: ArrayList<PieEntry> = ArrayList()
-    val colors: ArrayList<Int> = ArrayList()
-    for (series in data) {
-      entries.add(PieEntry(series.percentage))
-      colors.add(Color.parseColor(series.color))
+
+    fun setChartData(data: ArrayList<Series>) {
+        val textView = TextView(context).apply {
+            text = "Hello World"
+            setTextColor(Color.RED)
+        }
+        addView(textView)
     }
-    val dataSet = PieDataSet(entries, "DataSet");
-    dataSet.colors = colors;
-    val pieData = PieData(dataSet);
-    chartView.data = pieData;
-    chartView.invalidate();
-
-  }
 }
