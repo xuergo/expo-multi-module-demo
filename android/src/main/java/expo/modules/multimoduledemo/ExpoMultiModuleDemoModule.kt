@@ -8,7 +8,7 @@ class ExpoMultiModuleDemoModule : Module() {
     Name("ExpoMultiModuleDemo")
 
     View(ExpoMultiModuleDemoView::class) {
-      Prop("data") { view: ExpoMultiModuleDemoView, prop: Any ->
+      Prop("name") { view: ExpoMultiModuleDemoView, prop: Any ->
         view.setChartData();
       }
     }

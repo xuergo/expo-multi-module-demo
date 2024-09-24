@@ -5,6 +5,7 @@ export default function App() {
   return (
     <ExpoMultiModuleDemoView
       style={styles.container}
+      name="123"
     />
   );
 }

@@ -7,4 +7,5 @@ export type ChangeEventPayload = {
 
 export type ExpoMultiModuleDemoViewProps = {
   style?: ViewStyle;
+  name: string;
 };

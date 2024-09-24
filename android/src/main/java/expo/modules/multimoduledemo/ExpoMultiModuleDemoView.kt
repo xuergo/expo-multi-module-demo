@@ -14,7 +14,7 @@ class ExpoMultiModuleDemoView(context: Context, appContext: AppContext) : ExpoVi
     fun setChartData() {
         val textView = TextView(context).apply {
             text = "Hello World"
-            setTextColor(Color.RED)
+            setTextColor(Color.BLACK)
         }
         addView(textView)
     }
