@@ -11,9 +11,12 @@
 3. cd example
 4. npx expo run:android
 
-# 目前为止，运行成功 出现 hello world 
-
 # 目录结构  
 
-
+第三方包 mylibrary 在 example/android/mylibrary
+需要更改
+```
+example/android/settings.gradle
+android/build.gradle 
+```
 
